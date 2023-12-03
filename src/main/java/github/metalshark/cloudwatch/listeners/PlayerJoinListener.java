@@ -15,7 +15,7 @@ public class PlayerJoinListener implements Listener {
 
     public PlayerJoinListener init() {
         for (World world : Bukkit.getWorlds()) {
-            count = world.getPlayers().size();
+            count += world.getPlayers().size();
         }
         return this;
     }

@@ -1,6 +1,5 @@
 package github.metalshark.cloudwatch.listeners;
 
-import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.event.EventHandler;
@@ -16,7 +15,7 @@ public class ChunkLoadListener implements Listener {
 
     public ChunkLoadListener init() {
         for (World world : Bukkit.getWorlds()) {
-            count = world.getLoadedChunks().length;
+            count += world.getLoadedChunks().length;
         }
         return this;
     }
